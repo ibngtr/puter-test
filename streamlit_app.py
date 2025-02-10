@@ -7,7 +7,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 for message in st.session_state.messages:
-    st.text_area(label=message["role"], value=message["content"], disabled=True)
+    st.text_area(label=message["role"], value=message["content"], disabled=True, key=f"msg_{i}")
 
 user_input = st.text_input("Type a message...")
 
