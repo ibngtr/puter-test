@@ -25,4 +25,5 @@ if st.button("Send") and user_input:
         bot_response = "Error: Unable to get a valid response from the chatbot."
     
     st.session_state.messages.append({"role": "Bot", "content": bot_response})
-    st.experimental_rerun()
+    #st.experimental_rerun()
+    st.rerun()  # Use this instead of experimental_rerun()
